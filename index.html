@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sidecut — Player</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="room">
+    <header class="masthead">
+      <span class="masthead__mark">SIDE&nbsp;A</span>
+      <h1 class="masthead__title">Sidecut</h1>
+      <span class="masthead__mark">EST. NOW PLAYING</span>
+    </header>
+    <main class="deck">
+      <!-- Turntable -->
+      <section class="turntable" aria-hidden="false">
+        <div class="platter">
+          <div class="record" id="record">
+            <div class="record__label" id="recordLabel">
+              <span id="labelInitial">S</span>
+            </div>
+            <div class="record__grooves"></div>
+          </div>
+          <div class="tonearm" id="tonearm">
+            <div class="tonearm__base"></div>
+            <div class="tonearm__arm"></div>
+            <div class="tonearm__head"></div>
+          </div>
+        </div>
+      </section>
+      <!--Track info-->
+      <section class="console">
+        <div class="track-info">
+          <p class="track-info__eyebrow" id="trackCount">TRACK 01 / 03</p>
+          <h2 class="track-info__title" id="trackTitle">—</h2>
+          <p class="track-info__artist" id="trackArtist">—</p>
+        </div>
+        <div class="progress">
+          <span class="progress__time" id="currentTime">0:00</span>
+          <input type="range" id="progressBar" class="progress__bar" min="0" max="100" value="0" step="0.1" aria-label="Seek">
+          <span class="progress__time" id="durationTime">0:00</span>
+        </div>
+        <div class="transport">
+          <button class="transport__btn transport__btn--small" id="prevBtn" aria-label="Previous track">
+            <svg viewBox="0 0 24 24"><path d="M6 5h2v14H6zm3.5 7L20 5v14z"/></svg>
+          </button>
+          <button class="transport__btn transport__btn--play" id="playBtn" aria-label="Play">
+            <svg id="playIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            <svg id="pauseIcon" viewBox="0 0 24 24" style="display:none"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
+          </button>
+          <button class="transport__btn transport__btn--small" id="nextBtn" aria-label="Next track">
+            <svg viewBox="0 0 24 24"><path d="M16 5h2v14h-2zM4 5l10.5 7L4 19z"/></svg>
+          </button>
+        </div>
+        <div class="secondary-row">
+          <div class="volume">
+            <svg class="volume__icon" id="volIcon" viewBox="0 0 24 24"><path d="M3 10v4h4l5 5V5L7 10H3z"/></svg>
+            <input type="range" id="volumeBar" class="volume__bar" min="0" max="100" value="70" aria-label="Volume">
+          </div>
+          <label class="autoplay">
+            <input type="checkbox" id="autoplayToggle" checked>
+            <span class="autoplay__pill"><span class="autoplay__dot"></span></span>
+            <span class="autoplay__label">Autoplay</span>
+          </label>
+        </div>
+
+      </section>
+    </main>
+    <!--Playlist-->
+    <section class="liner">
+      <div class="liner__head">
+        <h3>Tracklist</h3>
+        <span class="liner__rule"></span>
+      </div>
+      <ol class="liner__list" id="playlist"></ol>
+    </section>
+    <p class="note">Demo tracks are synthesized in‑browser (Web Audio), so the player works with zero audio files. Swap in real songs by editing the <code>tracks</code> array in <code>script.js</code>.</p>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>

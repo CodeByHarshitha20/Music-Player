@@ -1,6 +1,6 @@
 # 🎵 Sidecut – Music Player
 A responsive vintage-style music player built with HTML, CSS, and JavaScript. It features playback controls, playlist management, animated vinyl effects, volume control, and a built-in Web Audio synthesizer for a smooth music experience.
-I posted my final project to here as well: 
+I posted my final project to here as well: https://codebyharshitha20.github.io/Music-Player/
 
 🛠️ Technologies
 - HTML5
